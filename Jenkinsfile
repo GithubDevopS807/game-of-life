@@ -15,7 +15,7 @@ pipeline{
         }
         stage('BUILD'){
             steps{
-               sh 'mvn ${params.mvn}'
+               sh "mvn ${params.mvn}"
             }
         }
         stage('POST'){
