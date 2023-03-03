@@ -6,8 +6,7 @@ pipeline{
     stages{
         stage('VCS'){
             steps{
-                git 'https://github.com/wakaleo/game-of-life.git'
-            }
+                git branch: 'dcpipeline', url: 'https://github.com/GithubDevopS807/game-of-life.git'
         }
         stage('BUILD'){
             steps{
