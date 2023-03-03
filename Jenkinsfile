@@ -7,6 +7,9 @@ pipeline{
         choice(name: 'BRANCH', choices: ['master', 'dcpipeline'], description: 'this is parameter')
         string(name: 'mvn', defaultValue: 'package', description: 'this is maven goal')
     }
+    triggers{
+        pollscm ('* * * * *')
+    }
     stages{
         stage('VCS'){
             steps{
