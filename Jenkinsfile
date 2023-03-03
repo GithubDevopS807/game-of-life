@@ -7,6 +7,7 @@ pipeline{
         stage('VCS'){
             steps{
                 git branch: 'dcpipeline', url: 'https://github.com/GithubDevopS807/game-of-life.git'
+            }
         }
         stage('BUILD'){
             steps{
